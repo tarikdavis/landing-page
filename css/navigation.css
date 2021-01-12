@@ -1,0 +1,53 @@
+.navigation {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "nav-links";
+  padding: 1rem;
+}
+
+.nav-links {
+  grid-area: nav-links;
+  display: flex;
+  justify-content: left;
+  width: 40%;
+}
+
+.nav-links ul,
+.social-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-links li {
+  float: left;
+  padding: 0 1rem;
+}
+
+.nav-links li a {
+  display: block;
+  color: #202020;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  border-bottom: solid 1px #202020;
+}
+
+.active {
+  border-left: solid 1px #202020;
+}
+
+@media (min-width: 600px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .active {
+    border: solid 1px #202020;
+  }
+}
